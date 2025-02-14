@@ -48,6 +48,7 @@ internal static class KeyArrayFormatter<TKey>
             {
                 // TODO: Options
                 Instance = (IMessagePackFormatter<T>)(object)(MessagePackSerializerOptions.Standard.Resolver.GetFormatter<T>() ?? throw new NotSupportedException());
+                return;
             }
 
             throw new NotSupportedException();
